@@ -5,7 +5,7 @@ import AlarmStep3 from "../../components/template/alarm/Step3";
 
 function AlarmForm() {
 	const [step, setStep] = useState(1);
-
+	
 	const handlePrevClick = () => {
 		if (step === 1) {
 			return;
@@ -21,7 +21,7 @@ function AlarmForm() {
 	};
 
 	return (
-		<>
+		<>   
 			{step === 1 && (
 				<AlarmStep1
 					onPrevClick={handlePrevClick}

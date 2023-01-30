@@ -9,10 +9,6 @@ body, h1, h2, h3, ul, li, dl, dt, dd, p, form, fieldset, legend {
     padding:0
 }
 
-ul, li{
-    list-style:none
-}
-
 a{
     color:inherit;
     text-decoration:none
@@ -402,7 +398,7 @@ main {
 
 /* alarm index */
 .alarm_title_wrap {
-    padding: 47px 0;
+    padding: 120px 0 47px 0;
     text-align: center;
 }
 
@@ -416,7 +412,7 @@ main {
 
 .alarm_add_btn {
     padding: 14px 60px;
-    background: linear-gradient(90deg, #2DD4BF 0%, #3B82F6 100%);
+    background: linear-gradient(90deg, #A97AFF 0%, #FFA5BE 100%);
     border-radius: 28px;
     color: #fff;
     font-weight: 300;
@@ -540,4 +536,79 @@ main {
 .next_btn.disabled {
     opacity: .5;
     pointer-events: none;
+}
+
+/* alarm step 2 */
+.form_input_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 65px 0 36px 0;
+}
+
+#hours {
+    width: 60px;
+    height: 30px;
+    border-color: #999;
+    margin-right: 12px;
+}
+
+#hours:focus {
+    border-color: #003379;
+}
+
+.form_minutes_sel {
+    display: flex;
+    align-items: center;
+    margin: 0 46px;
+}
+
+.minutes_arrow {
+    font-size: 30px;
+}
+
+.add_alarm {
+    width: 20px;
+    height: 20px;
+    background: url(../public/static/images/add_alarm.png) no-repeat; 
+    text-indent: -9999px;
+}
+
+.hours_info li {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.modal_background {
+    position: fixed;
+    top:0; 
+    left: 0; 
+    bottom: 0; 
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.sel_modal {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 313px;
+    padding: 18px 40px;
+    background: #E9DDFF;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.sel_minutes {
+    display: flex;
+    flex-direction: column;
+}
+
+.sel_minutes span {
+    margin-bottom: 12px;
+}
+
+.sel_btn_wrap {
+    display: flex;
+    justify-content: space-between;
 }

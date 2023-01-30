@@ -13,7 +13,7 @@ function Splash(){
         setTimeout(()=>{
             navigate('/intro');
         }, 3400)
-    }, []);
+    }, [navigate]);
 
     return(
         <div className={"splash_container" + (loading? " fadeOut" : "")}>

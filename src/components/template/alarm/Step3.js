@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
-import AlarmNavbar from "./Navbar";
+import BottomNav from "../../fragments/BottomNav";
+import TopNav from "../../fragments/TopNav";
 
 function AlarmStep3({ onPrevClick, onNextClick }) {
 	return (
 		<div>
-			<AlarmNavbar onArrowClick={onPrevClick} />
-			<main>step3</main>
-			<footer>
-				<div className="footer_btn_wrap">
-					<Link to="" className="next_btn" onClick={onNextClick}>
-						다음
-					</Link>
+			<header>
+				<TopNav />
+			</header>
+			<main>
+				<div className="alarm_complete_wrap">
+					<h2>복용 시간이 되면 알려드릴게요!</h2>
+					<Link to="/alarm/list" className="list_btn">알림 목록 보기</Link>
 				</div>
+				
+			</main>
+			<footer>
+				<BottomNav />
 			</footer>
 		</div>
 	);

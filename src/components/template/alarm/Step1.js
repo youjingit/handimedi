@@ -35,7 +35,9 @@ const days = [
 function AlarmStep1({ onPrevClick, onNextClick }) {
 	return (
 		<div>
-			<AlarmNavbar onArrowCilck={onPrevClick} />
+			<header>
+				<AlarmNavbar onArrowCilck={onPrevClick} />
+			</header>
 			<main>
 				<form className="medi_register_form">
 					<fieldset>

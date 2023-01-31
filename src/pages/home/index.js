@@ -9,7 +9,9 @@ function Home() {
 
 	return (
 		<div>
-			<TopNav />
+			<header>
+				<TopNav />
+			</header>
 			<main>
 				<section>
 					<div className="main_image_wrap">
@@ -86,15 +88,18 @@ function Home() {
 							<div className="question_body">
 								<div>A.</div>
 								<p>
-									젤라틴으로 만든 캡슐은 치료하고자 하는 부위와 이동 시간을
-									설정하기 위해 만들어진 것이므로 형태 그대로 복용해야 합니다!
+									젤라틴으로 만든 캡슐은 치료하고자 하는 부위와<br/> 
+									이동 시간을 설정하기 위해 만들어진 것이므로<br/> 
+									형태 그대로 복용해야 합니다!
 								</p>
 							</div>
 						)}
 					</div>
 				</section>
 			</main>
-			<BottomNav activeMenu="home" />
+			<footer>
+				<BottomNav activeMenu="home" />
+			</footer>
 		</div>
 	);
 }

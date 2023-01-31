@@ -23,25 +23,23 @@ const menus = [
 
 function BottomNav({ activeMenu }) {
 	return (
-		<footer>
-			<ul className="bottom_nav">
-				{menus.map((menu) => {
-					return (
-						<li
-							key={menu.id}
-							className={classNames("bottom_nav_item", {
-								active: activeMenu === menu.id,
-							})}
-						>
-							<Link to={`/${menu.id}`} className="bottom_nav_link">
-								<i className="bottom_nav_icon">{menu.icon}</i>
-								<span className="bottom_nav_text">{menu.id}</span>
-							</Link>
-						</li>
-					);
-				})}
-			</ul>
-		</footer>
+		<ul className="bottom_nav">
+			{menus.map((menu) => {
+				return (
+					<li
+						key={menu.id}
+						className={classNames("bottom_nav_item", {
+							active: activeMenu === menu.id,
+						})}
+					>
+						<Link to={`/${menu.id}`} className="bottom_nav_link">
+							<i className="bottom_nav_icon">{menu.icon}</i>
+							<span className="bottom_nav_text">{menu.id}</span>
+						</Link>
+					</li>
+				);
+			})}
+		</ul>
 	);
 }
 

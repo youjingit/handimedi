@@ -5,7 +5,9 @@ import TopNav from "../../components/fragments/TopNav";
 function Alarm() {
 	return (
 		<div>
-			<TopNav />
+			<header>
+				<TopNav />
+			</header>
 			<main>
 				<div className="alarm_title_wrap">
 					<h2>약 복용 알림 목록</h2>
@@ -13,12 +15,14 @@ function Alarm() {
 				<div className="alarm_content_wrap">
 					<p>알림을 등록해보세요.</p>
 					<img src="/static/images/alarm_index.png" alt="알림등록" />
-					<Link to="/alarm/form" className="alarm_add_btn">
+					<Link to="/alarm/form" className="add_alarm_btn">
 						알림 등록하기
 					</Link>
 				</div>
 			</main>
-			<BottomNav activeMenu="alarm" />
+			<footer>
+				<BottomNav activeMenu="alarm" />
+			</footer>
 		</div>
 	);
 }

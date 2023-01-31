@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaCaretDown } from "react-icons/fa";
+import { IoCaretDown } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import AlarmNavbar from "./Navbar";
 
@@ -7,7 +7,9 @@ function AlarmStep2({ onPrevClick, onNextClick }) {
 	const [modal, setModal] = useState(false);
 	return (
 		<div>
-			<AlarmNavbar onArrowClick={onPrevClick} />
+			<header>
+				<AlarmNavbar onArrowClick={onPrevClick} />
+			</header>
 			<main>
 				<form className="medi_register_form">
 					<fieldset>
@@ -21,8 +23,8 @@ function AlarmStep2({ onPrevClick, onNextClick }) {
 								</div>
 								<div className="form_minutes_sel">
 									<span>0 분</span>
-									<button type="button">
-										<FaCaretDown className="minutes_arrow"
+									<button type="button" className="minutes_arrow">
+										<IoCaretDown 
 										onClick={ () => { setModal(true) } }/>
 									</button>
 									{
@@ -38,8 +40,8 @@ function AlarmStep2({ onPrevClick, onNextClick }) {
 													<span>50분</span>
 												</div> 
 												<div className="sel_btn_wrap">
-													<button type="button">닫기</button>
-													<button type="button">확인</button>
+													<button type="button" className="close_btn" onClick={ () => { setModal(false) }}>닫기</button>
+													<button type="button" className="confirm_btn">확인</button>
 												</div>
 											</div>
 										</div> : null

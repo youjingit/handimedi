@@ -13,7 +13,11 @@ function Photo() {
 					<h2>사진으로 약 검색하기</h2>
 				</div>
 				<div className="photo_content_wrap">
-					<img src="/static/images/" alt="사진검색" />
+					<img
+						src="/static/images/search_index.png"
+						alt="사진검색"
+						width={"174px"}
+					/>
 					<Link to="/photo/form" className="add_photo_btn">
 						사진 업로드하기
 					</Link>

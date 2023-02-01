@@ -12,24 +12,35 @@ function PhotoStep1({ onPrevClick, onNextClick }) {
 		const reader = new FileReader();
 		reader.readAsDataURL(file);
 		reader.onloadend = () => {
-        setImgFile(reader.result); 
+			setImgFile(reader.result);
+		};
 	};
-};
 	return (
 		<div>
 			<header>
 				<TemplateNavbar onArrowClick={onPrevClick} />
 			</header>
-			<main>
+			<main id="photo_step1">
 				<form className="photo_upload_form">
 					<fieldset>
 						<legend className="hide">검색할 사진 업로드</legend>
 						<div>
-							<h2>사진 업로드하기</h2>
-							<div className="file_upload_wrap">
-								<input type="file" accept="image/*" onChange={saveImgFile} ref={imgRef} id="search_img" className="file_input" />
-								<img src={imgFile ? imgFile : "/static/images/pill.png"} alt="사진 미리보기" />
-								<label htmlFor="search_img">검색할 사진 선택</label>
+							<h2 className="hide">사진 업로드하기</h2>
+							<div className="photo_upload_wrap">
+								<input
+									type="file"
+									accept="image/*"
+									onChange={saveImgFile}
+									ref={imgRef}
+									id="search_img"
+									className="file_input"
+								/>
+								<img
+									src={imgFile ? imgFile : "/static/images/photo_step1.png"}
+									alt="사진 미리보기"
+									width={"174px"}
+								/>
+								<label htmlFor="search_img">검색할 사진 추가</label>
 							</div>
 						</div>
 					</fieldset>
@@ -43,7 +54,7 @@ function PhotoStep1({ onPrevClick, onNextClick }) {
 				</div>
 			</footer>
 		</div>
-		);
-	}
+	);
+}
 
 export default PhotoStep1;

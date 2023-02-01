@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const menus = [
 	{
 		id: "home",
-		icon: <FaHome />,
+		icon: <FaHome style={{ width: '28px'}}/>,
 	},
 	{
 		id: "alarm",

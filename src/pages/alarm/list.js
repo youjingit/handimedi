@@ -24,8 +24,8 @@ function AlarmList() {
                             <div className="alarm_time">
                                 <span>월, 수, 금</span>
                                 <div>
-                                    <span>08:30</span>
-                                    <span>14:00</span>
+                                    <span className="time_list">08:30</span>
+                                    <span className="time_list">14:00</span>
                                     <span>19:30</span>
                                 </div>
                             </div>

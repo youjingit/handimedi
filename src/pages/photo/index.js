@@ -1,12 +1,27 @@
+import { Link } from "react-router-dom";
 import BottomNav from "../../components/fragments/BottomNav";
 import TopNav from "../../components/fragments/TopNav";
 
 function Photo() {
 	return (
 		<div>
-			<TopNav />
-			<main></main>
-			<BottomNav activeMenu="photo" />
+			<header>
+				<TopNav />
+			</header>
+			<main>
+				<div className="photo_title_wrap">
+					<h2>사진으로 약 검색하기</h2>
+				</div>
+				<div className="photo_content_wrap">
+					<img src="/static/images/" alt="사진검색" />
+					<Link to="/photo/form" className="add_photo_btn">
+						사진 업로드하기
+					</Link>
+				</div>
+			</main>
+			<footer>
+				<BottomNav activeMenu="photo" />
+			</footer>
 		</div>
 	);
 }

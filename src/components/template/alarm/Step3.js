@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import BottomNav from "../../fragments/BottomNav";
 import TopNav from "../../fragments/TopNav";
 
-function AlarmStep3({ onPrevClick, onNextClick }) {
+function AlarmStep3() {
 	return (
 		<div>
 			<header>
@@ -17,7 +17,7 @@ function AlarmStep3({ onPrevClick, onNextClick }) {
 			</main>
 			<footer>
 				<BottomNav />
-			</footer>
+			</footer> 
 		</div>
 	);
 }

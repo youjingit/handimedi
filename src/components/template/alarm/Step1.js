@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import AlarmNavbar from "./Navbar";
+import TemplateNavbar from "./Navbar";
 
 const days = [
 	{
@@ -36,7 +36,7 @@ function AlarmStep1({ onPrevClick, onNextClick }) {
 	return (
 		<div>
 			<header>
-				<AlarmNavbar onArrowCilck={onPrevClick} />
+				<TemplateNavbar onArrowClick={onPrevClick} />
 			</header>
 			<main>
 				<form className="medi_register_form">

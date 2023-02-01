@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { IoCaretDown } from "react-icons/io5";
 import { Link } from "react-router-dom";
-import AlarmNavbar from "./Navbar";
+import TemplateNavbar from "./Navbar";
 
 function AlarmStep2({ onPrevClick, onNextClick }) {
 	const [modal, setModal] = useState(false);
 	return (
 		<div>
 			<header>
-				<AlarmNavbar onArrowClick={onPrevClick} />
+				<TemplateNavbar onArrowClick={onPrevClick} />
 			</header>
 			<main>
 				<form className="medi_register_form">
@@ -29,7 +29,7 @@ function AlarmStep2({ onPrevClick, onNextClick }) {
 									</button>
 									{
 										modal == true ? 
-										<div class="modal_background">
+										<div className="modal_background">
 											<div className="sel_modal">
 												<div className="sel_minutes">
 													<span>0분</span>

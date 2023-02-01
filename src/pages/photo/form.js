@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import AlarmStep1 from "../../components/template/alarm/Step1";
-import AlarmStep2 from "../../components/template/alarm/Step2";
-import AlarmStep3 from "../../components/template/alarm/Step3";
+import PhotoStep1 from "../../components/template/photo/Step1";
+import PhotoStep2 from "../../components/template/photo/Step2";
+import PhotoStep3 from "../../components/template/photo/Step3";
 
-function AlarmForm() {
+function PhotoForm() {
 	const [step, setStep] = useState(1);
 	let navigate = useNavigate();
 	
@@ -26,19 +26,19 @@ function AlarmForm() {
 	return (
 		<>   
 			{step === 1 && (
-				<AlarmStep1
+				<PhotoStep1
 					onPrevClick={handlePrevClick}
 					onNextClick={handleNextClick}
 				/>
 			)}
 			{step === 2 && (
-				<AlarmStep2
+				<PhotoStep2
 					onPrevClick={handlePrevClick}
 					onNextClick={handleNextClick}
 				/>
 			)}
 			{step === 3 && (
-				<AlarmStep3
+				<PhotoStep3
 					onPrevClick={handlePrevClick}
 					onNextClick={handleNextClick}
 				/>
@@ -47,4 +47,4 @@ function AlarmForm() {
 	);
 }
 
-export default AlarmForm;
+export default PhotoForm;

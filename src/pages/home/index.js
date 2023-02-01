@@ -18,8 +18,9 @@ function Home() {
 						<img src="/static/images/main_image.jpg" alt="약" />
 						<div className="main_image_backdrop"></div>
 						<p>
-							이제 집에서 편리하게
-							<br />약 복용 알림 서비스를 이용해보세요.
+							간편하게 관리해주는
+							<br />
+							나만을 위한 복약 알리미
 						</p>
 						<form className="main_image_search" action="" method="">
 							<fieldset>

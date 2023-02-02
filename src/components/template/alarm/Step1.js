@@ -57,6 +57,11 @@ function AlarmStep1({ onPrevClick, onNextClick }) {
 										name="day"
 										value="everyday"
 									/>
+									{
+									(document.getElementById("everyday").checked == true) ? 
+									(document.getElementsByClassName("day").disabled == true) : 
+									(document.getElementsByClassName("day").disabled == false) 
+									};
 									<label htmlFor="everyday" className="form_radio_label">
 										매일
 									</label>

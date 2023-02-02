@@ -20,13 +20,13 @@ function PhotoStep1({ onPrevClick, onNextClick }) {
 			<header>
 				<TemplateNavbar onArrowClick={onPrevClick} />
 			</header>
-			<main id="photo_step1">
-				<form className="photo_upload_form">
+			<main>
+				<form>
 					<fieldset>
 						<legend className="hide">검색할 사진 업로드</legend>
 						<div>
 							<h2 className="hide">사진 업로드하기</h2>
-							<div className="photo_upload_wrap">
+							<div className="container gap50">
 								<input
 									type="file"
 									accept="image/*"
@@ -36,11 +36,11 @@ function PhotoStep1({ onPrevClick, onNextClick }) {
 									className="file_input"
 								/>
 								<img
-									src={imgFile ? imgFile : "/static/images/photo_step1.png"}
+									src={imgFile ? imgFile : process.env.PUBLIC_URL + '/static/images/photo_step1.png'}
 									alt="사진 미리보기"
 									width={"174px"}
 								/>
-								<label htmlFor="search_img">검색할 사진 추가</label>
+								<label htmlFor="search_img" className="add_photo">검색할 사진 추가</label>
 							</div>
 						</div>
 					</fieldset>

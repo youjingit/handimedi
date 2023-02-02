@@ -9,14 +9,11 @@ function Alarm() {
 				<TopNav />
 			</header>
 			<main>
-				<div className="alarm_title_wrap">
+				<div className="container gap50">
 					<h2>약 복용 알림 목록</h2>
-				</div>
-				<div className="alarm_content_wrap">
-					<p>알림을 등록해보세요.</p>
-					<img src="/static/images/alarm_index.png" alt="알림등록" />
+					<img src={process.env.PUBLIC_URL + '/static/images/alarm_index.png'} alt="알림등록" />
 					<Link to="/alarm/form" className="add_alarm_btn">
-						알림 등록하기
+						알림을 등록해보세요
 					</Link>
 				</div>
 			</main>

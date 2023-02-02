@@ -401,26 +401,25 @@ main {
     margin-top: 20px;
 }
 
-/* alarm index */
-.alarm_title_wrap,
-.photo_title_wrap {
-    padding: 120px 0 47px 0;
-    text-align: center;
-}
-
-.alarm_title_wrap h2,
-.photo_title_wrap h2{
-    font-size: 20px;
-}
-
-.alarm_content_wrap,
-.photo_content_wrap {
+/* common */
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 60px;
+    padding: 120px 40px 40px 40px;
 }
+
+.container.gap50 {
+    gap: 50px
+}
+
+.container h2 {
+    font-size: 20px;
+}
+
+
+/* alarm index */
 
 .add_alarm_btn {
     padding: 14px 60px;
@@ -447,8 +446,8 @@ main {
 .form_input {
     width: 310px;
     height: 30px;
+    border: 0.5px solid #3e3a39;
     border-radius: 5px;
-    border-color: #3e3a39;
     margin-bottom: 65px;
 }
 
@@ -646,23 +645,6 @@ main {
 }
 
 /* alarm step3 */
-.alarm_complete_wrap,
-.photo_complete_wrap,
-.alarm_list_wrap,
-.photo_upload_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 120px 40px;
-}
-
-.alarm_complete_wrap h2,
-.photo_complete_wrap h2,
-.alarm_list_wrap h2 {
-    font-size: 20px;
-    text-align: center;
-}
 
 .list_btn {
     display: flex;
@@ -735,29 +717,13 @@ main {
 }
 
 /* photo Step1 */
-#photo_step1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.photo_upload_form {
-    padding: 0;
-}
-.photo_upload_wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 .file_input {
     display: none;
 }
 
-.photo_upload_wrap label{
+.add_photo{
     text-decoration: underline;
-    margin-top: 40px;
     padding-right: 16px;
 }
 

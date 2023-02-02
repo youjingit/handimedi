@@ -15,7 +15,7 @@ function Home() {
 			<main>
 				<section>
 					<div className="main_image_wrap">
-						<img src="/static/images/main_image.jpg" alt="약" />
+						<img src={process.env.PUBLIC_URL + '/static/images/main_image.jpg'} alt="메인타이틀" />
 						<div className="main_image_backdrop"></div>
 						<p>
 							간편하게 관리해주는
@@ -34,7 +34,7 @@ function Home() {
 				<section className="service_section">
 					<div className="service_bg">
 						<img
-							src="/static/images/main_circle.png"
+							src={process.env.PUBLIC_URL + '/static/images/main_circle.png'}
 							alt="animation"
 							className="service_bg_img1"
 						/>
@@ -42,7 +42,7 @@ function Home() {
 					<div className="service_bg">
 						<div className="service_gray_circle">
 							<img
-								src="/static/images/pill.png"
+								src={process.env.PUBLIC_URL + '/static/images/pill.png'}
 								alt="알약"
 								className="service_bg_img2"
 							/>
@@ -89,8 +89,8 @@ function Home() {
 							<div className="question_body">
 								<div>A.</div>
 								<p>
-									젤라틴으로 만든 캡슐은 치료하고자 하는 부위와<br/> 
-									이동 시간을 설정하기 위해 만들어진 것이므로<br/> 
+									젤라틴으로 만든 캡슐은 치료하고자 하는 부위와 
+									이동 시간을 설정하기 위해 만들어진 것이므로
 									형태 그대로 복용해야 합니다!
 								</p>
 							</div>

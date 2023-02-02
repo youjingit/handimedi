@@ -8,7 +8,9 @@ function PhotoStep2({ onPrevClick, onNextClick }) {
 				<TemplateNavbar onArrowClick={onPrevClick} />
 			</header>
 			<main>
-				<h2>약을 찾고있어요...</h2>
+				<div className="container">
+					<h2>약을 찾고있어요...</h2>
+				</div>
 			</main>
 			<footer>
 				<Link to="" className="next_btn" onClick={onNextClick}>

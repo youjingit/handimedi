@@ -11,7 +11,7 @@ function AlarmList() {
 				<TopNav />
 			</header>
 			<main>
-				<div className="alarm_list_wrap">
+				<div className="container">
 					<h2>약 복용 알림 목록</h2>
 					
                     <div className="alarm_list">

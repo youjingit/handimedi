@@ -17,7 +17,9 @@ function Splash(){
 
     return(
         <div className={"splash_container" + (loading? " fadeOut" : "")}>
-            <img src="/static/images/logo.png" alt="handimedi"/>
+            <h1>
+                <img src={process.env.PUBLIC_URL + '/static/images/logo.png'} alt="handimedi"/>
+            </h1>
         </div>
     )
 }

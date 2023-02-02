@@ -11,13 +11,14 @@ function AlarmStep3() {
 			<main>
 				<div className="container gap50">
 					<h2>복용 시간이 되면 알려드릴게요!</h2>
-					<Link to="/alarm/list" className="list_btn">알림 목록 보기</Link>
+					<Link to="/alarm/list" className="list_btn">
+						알림 목록 보기
+					</Link>
 				</div>
-				
 			</main>
 			<footer>
-				<BottomNav activeMenu={"alarm"}/>
-			</footer> 
+				<BottomNav activeMenu="alarm" />
+			</footer>
 		</div>
 	);
 }

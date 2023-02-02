@@ -1,7 +1,8 @@
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 import TemplateNavbar from "./Navbar";
 
-const days = [
+const DAYS = [
 	{
 		name: "월",
 		value: "monday",
@@ -32,7 +33,7 @@ const days = [
 	},
 ];
 
-function AlarmStep1({ onPrevClick, onNextClick }) {
+function AlarmStep1({ values, setValues, onPrevClick, onNextClick }) {
 	return (
 		<div>
 			<header>
@@ -44,7 +45,13 @@ function AlarmStep1({ onPrevClick, onNextClick }) {
 						<legend className="hide">약 복용 정보 입력</legend>
 						<div>
 							<h2>어떤 약을 복용하시나요?</h2>
-							<input type="text" className="form_input" />
+							<input
+								type="text"
+								className="form_input"
+								name="name"
+								value={values.name}
+								onChange={setValues}
+							/>
 						</div>
 						<div>
 							<h2>언제 복용하시나요?</h2>
@@ -56,12 +63,9 @@ function AlarmStep1({ onPrevClick, onNextClick }) {
 										className="form_radio"
 										name="day"
 										value="everyday"
+										checked={values.day === "everyday"}
+										onChange={setValues}
 									/>
-									{
-									(document.getElementById("everyday").checked == true) ? 
-									(document.getElementsByClassName("day").disabled == true) : 
-									(document.getElementsByClassName("day").disabled == false) 
-									};
 									<label htmlFor="everyday" className="form_radio_label">
 										매일
 									</label>
@@ -75,36 +79,47 @@ function AlarmStep1({ onPrevClick, onNextClick }) {
 										className="form_radio"
 										name="day"
 										value="specialday"
+										checked={values.day === "specialday"}
+										onChange={setValues}
 									/>
 									<label htmlFor="specialday" className="form_radio_label">
 										특정 요일에
 									</label>
 								</div>
 							</div>
-							<div className="form_inline_between">
-								{days.map((day) => {
-									return (
-										<div key={day.value} className="form_check_wrap">
-											<input
-												type="checkbox"
-												className="form_check"
-												id={day.value}
-												value={day.value}
-											/>
-											<label htmlFor={day.value} className="form_check_label">
-												{day.name}
-											</label>
-										</div>
-									);
-								})}
-							</div>
+							{values.day === "specialday" && (
+								<div className="form_inline_between">
+									{DAYS.map((day) => {
+										return (
+											<div key={day.value} className="form_check_wrap">
+												<input
+													type="checkbox"
+													className="form_check"
+													id={day.value}
+													name="days"
+													value={day.value}
+													checked={values.days.includes(day.value)}
+													onChange={setValues}
+												/>
+												<label htmlFor={day.value} className="form_check_label">
+													{day.name}
+												</label>
+											</div>
+										);
+									})}
+								</div>
+							)}
 						</div>
 					</fieldset>
 				</form>
 			</main>
 			<footer>
 				<div className="footer_btn_wrap">
-					<Link to="" className="next_btn" onClick={onNextClick}>
+					<Link
+						to=""
+						className={classNames("next_btn", { disabled: !values.name })}
+						onClick={onNextClick}
+					>
 						다음
 					</Link>
 				</div>

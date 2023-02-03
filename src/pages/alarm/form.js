@@ -12,16 +12,15 @@ function AlarmForm() {
 		day: "everyday",
 		days: [],
 		times: [
-			// {
-			// 	hour: "",
-			// 	minute: "",
-			// 	second:""
-			// }
+			{
+				hour: "",
+				minute: "",
+			}
 		],
 	});
 
 	const handleChange = (event) => {
-		let newValue = event.target.value; // 사용자가 변경한 값
+		let newValue = event.target.value; // 사용자가 변경할 값
 		if (event.target.name === "days") {
 			if (event.target.checked) {
 				newValue = [...values.days, event.target.value];
@@ -80,6 +79,8 @@ function AlarmForm() {
 			)}
 			{step === 2 && (
 				<AlarmStep2
+					values={values}
+					setValues={handleChange}
 					onPrevClick={handlePrevClick}
 					onNextClick={handleNextClick}
 				/>

@@ -550,22 +550,28 @@ main {
     pointer-events: none;
 }
 
-/* alarm step 2 */
+/* alarm step2 */
 .form_input_wrap {
     display: flex;
     align-items: center;
     padding: 65px 0 36px 0;
 }
 
-#hours {
+#hour {
     width: 60px;
     height: 30px;
     border-color: #999;
     margin-right: 12px;
 }
 
-#hours:focus {
+#hour:focus {
     border-color: #0047AA;
+}
+
+#minute {
+    width: 50px;
+    height: 30px;
+    border: none;
 }
 
 .form_minutes_sel {
@@ -587,9 +593,36 @@ main {
     text-indent: -9999px;
 }
 
-.hours_info li {
+.hour_info li {
     font-size: 12px;
     margin-bottom: 8px;
+}
+
+.alarm_list ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    gap: 16px
+}
+
+.alarm_list li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 268px;
+    height: 54px;
+    background: #E9DDFF;
+    border-radius: 12px;
+}
+
+.alarm_list .delete_btn {
+    font-size: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 .modal_background {
@@ -599,6 +632,7 @@ main {
     bottom: 0; 
     right: 0;
     background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
 }
 
 .sel_modal {
@@ -617,9 +651,15 @@ main {
     flex-direction: column;
 }
 
-.sel_minutes span {
+.minutes {
     margin-bottom: 12px;
+    cursor: pointer;
 }
+
+.minutes.active {
+    background: #d9afe7;
+}
+
 
 .sel_btn_wrap {
     display: flex;
@@ -634,6 +674,7 @@ main {
     height: 40px;
     color: #fff;
     border-radius: 6px;
+    margin-right: 10px;
 }
 
 .close_btn {
@@ -659,15 +700,7 @@ main {
 /* alarm list */
 
 
-.alarm_list,
-.search_result_wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    margin-top: 48px;
-    gap: 20px
-}
+
 
 .register_btn {
     display: flex;
@@ -732,8 +765,12 @@ main {
 
 /* photo Step3 */
 .search_result_wrap {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 48px;
+    justify-content: center;
+    margin: 48px 0;
+    gap: 20px
 }
 
 .search_result_item {

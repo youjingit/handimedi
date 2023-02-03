@@ -89,20 +89,20 @@ function AlarmStep1({ values, setValues, onPrevClick, onNextClick }) {
 							</div>
 							{values.day === "specialday" && (
 								<div className="form_inline_between">
-									{DAYS.map((day) => {
+									{DAYS.map((dayObj) => {
 										return (
-											<div key={day.value} className="form_check_wrap">
+											<div key={dayObj.value} className="form_check_wrap">
 												<input
 													type="checkbox"
 													className="form_check"
-													id={day.value}
+													id={dayObj.value}
 													name="days"
-													value={day.value}
-													checked={values.days.includes(day.value)}
+													value={dayObj.value}
+													checked={values.days.includes(dayObj.value)}
 													onChange={setValues}
 												/>
-												<label htmlFor={day.value} className="form_check_label">
-													{day.name}
+												<label htmlFor={dayObj.value} className="form_check_label">
+													{dayObj.name}
 												</label>
 											</div>
 										);

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import AlarmStep1 from "../../components/template/alarm/Step1";
 import AlarmStep2 from "../../components/template/alarm/Step2";
 import AlarmStep3 from "../../components/template/alarm/Step3";
+import { save } from "api/alarmApi";
 
 function AlarmForm() {
 	let navigate = useNavigate();
@@ -12,10 +13,10 @@ function AlarmForm() {
 		day: "everyday",
 		days: [],
 		times: [
-			{
-				hour: "",
-				minute: "",
-			}
+			// {
+			// 	hour: "",
+			// 	minute: "",
+			// },
 		],
 	});
 
@@ -42,6 +43,32 @@ function AlarmForm() {
 		}));
 	};
 
+	const handlePlusTime = (hour, minute) => {
+		if (values.times.length === 3) {
+			return;
+		}
+		const newValue = [...values.times, { hour: hour, minute: minute }];
+		setValues((state) => ({
+			...state,
+			times: newValue,
+		}));
+	};
+
+	const handleMinusTime = (index) => {
+		// const newValue = values.times.filter(time => time.hour !== hour && time.minute !== minute);
+		let newValue = [];
+		for (var i = 0; i < values.times.length; i++) {
+			var time = values.times[i];
+			if (index !== i) {
+				newValue.push(time);
+			}
+		}
+		setValues((state) => ({
+			...state,
+			times: newValue,
+		}));
+	};
+
 	// setValues(function(state){
 	// 	return{
 	// 		name: state.name,
@@ -64,7 +91,11 @@ function AlarmForm() {
 		if (step === 3) {
 			return;
 		}
-		setStep(step + 1);
+		const nextStep = step + 1; // alarm 2에서 3으로 넘어갈 때 데이터 저장
+		if (nextStep === 3) {
+			save(values);
+		}
+		setStep(nextStep);
 	};
 	console.log(values);
 	return (
@@ -80,7 +111,8 @@ function AlarmForm() {
 			{step === 2 && (
 				<AlarmStep2
 					values={values}
-					setValues={handleChange}
+					addValues={handlePlusTime}
+					delValues={handleMinusTime}
 					onPrevClick={handlePrevClick}
 					onNextClick={handleNextClick}
 				/>

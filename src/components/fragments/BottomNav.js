@@ -5,18 +5,22 @@ import { Link } from "react-router-dom";
 const menus = [
 	{
 		id: "home",
-		icon: <FaHome style={{ width: '28px'}}/>,
+		src: "/home",
+		icon: <FaHome style={{ width: "28px" }} />,
 	},
 	{
 		id: "alarm",
+		src: "/alarm/list",
 		icon: <FaClock />,
 	},
 	{
 		id: "photo",
+		src: "/photo",
 		icon: <FaImage />,
 	},
 	{
 		id: "setting",
+		src: "/setting",
 		icon: <FaCog />,
 	},
 ];
@@ -32,7 +36,7 @@ function BottomNav({ activeMenu }) {
 							active: activeMenu === menu.id,
 						})}
 					>
-						<Link to={`/${menu.id}`} className="bottom_nav_link">
+						<Link to={`${menu.src}`} className="bottom_nav_link">
 							<i className="bottom_nav_icon">{menu.icon}</i>
 							<span className="bottom_nav_text">{menu.id}</span>
 						</Link>

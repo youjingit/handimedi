@@ -1,25 +1,29 @@
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import TemplateNavbar from "./Navbar";
 
-function PhotoStep2({ onPrevClick, onNextClick }) {
+function PhotoStep2({ onPrevClick }) {
+	let navigate = useNavigate();
+
+	useEffect(() => {
+		setTimeout(() => {
+			navigate("/photo/step3");
+		}, 3400);
+	}, [navigate]);
 	return (
 		<div>
 			<header>
 				<TemplateNavbar onArrowClick={onPrevClick} />
 			</header>
 			<main>
-				<div className="container gap50">
+				<div className="container">
 					<h2>약을 찾고있어요...</h2>
-				</div>
-				<div className="loading_image">
-
+					<div className="loading_image">
+						<img src="/static/images/loading.gif" alt="사진검색중" />
+					</div>
 				</div>
 			</main>
-			<footer>
-				<Link to="" className="next_btn" onClick={onNextClick}>
-					확인
-				</Link>
-			</footer>
+			<footer></footer>
 		</div>
 	);
 }

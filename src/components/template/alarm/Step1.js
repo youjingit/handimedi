@@ -5,31 +5,31 @@ import TemplateNavbar from "./Navbar";
 const DAYS = [
 	{
 		name: "월",
-		value: "monday",
+		value: "월",
 	},
 	{
 		name: "화",
-		value: "tuesday",
+		value: "화",
 	},
 	{
 		name: "수",
-		value: "wednesday",
+		value: "수",
 	},
 	{
 		name: "목",
-		value: "thursday",
+		value: "목",
 	},
 	{
 		name: "금",
-		value: "friday",
+		value: "금",
 	},
 	{
 		name: "토",
-		value: "saturday",
+		value: "토",
 	},
 	{
 		name: "일",
-		value: "sunday",
+		value: "일",
 	},
 ];
 
@@ -101,7 +101,10 @@ function AlarmStep1({ values, setValues, onPrevClick, onNextClick }) {
 													checked={values.days.includes(dayObj.value)}
 													onChange={setValues}
 												/>
-												<label htmlFor={dayObj.value} className="form_check_label">
+												<label
+													htmlFor={dayObj.value}
+													className="form_check_label"
+												>
 													{dayObj.name}
 												</label>
 											</div>

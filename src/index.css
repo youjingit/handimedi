@@ -829,3 +829,31 @@ main {
     margin-top: 16px;
     text-decoration: underline;
 }
+
+/* setting */
+.setting_list a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding: 14px 40px;
+    background: #ECF7FF;
+}
+
+.setting_list_item{
+    display: none;
+}
+
+.setting_list_item li {
+    padding: 20px 40px;
+}
+
+.open_btn {
+    display: block;
+    background: url(/public/static/images/arrow_down.png);
+    width: 18px;
+    height: 9px;
+    text-indent: -9999px;
+    cursor: pointer;
+}

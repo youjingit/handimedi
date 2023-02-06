@@ -6,19 +6,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-import { login, loadProfile } from "../../hocs/firebase";
-import { useEffect } from "react";
-
 function Intro() {
-	const init = async () => {
-		const profile = await loadProfile();
-		console.log(profile);
-	};
-
-	useEffect(() => {
-		init();
-	}, []);
-
 	return (
 		<div className="intro_container">
 			<Swiper
@@ -73,13 +61,6 @@ function Intro() {
 						<Link to="/home" className="intro_swiper_item_btn">
 							지금 시작하기
 						</Link>
-						<button
-							type="button"
-							className="intro_swiper_item_btn"
-							onClick={login}
-						>
-							구글 아이디로 시작하기
-						</button>
 					</div>
 				</SwiperSlide>
 			</Swiper>

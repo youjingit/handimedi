@@ -15,8 +15,8 @@ function Setting() {
 	};
 
 	useEffect(() => {
-		$(".setting_list a").click(function () {
-			$(".setting_list_item").not($(this).next()).slideUp();
+		$(".setting_list_toggle a").click(function () {
+			$(".setting_list_wrap").not($(this).next()).slideUp();
 			$(this).next().slideToggle("slow");
 		});
 	}, []);
@@ -25,50 +25,116 @@ function Setting() {
 		<div>
 			<TopNav />
 			<main>
-				<ul>
-					<li className="setting_list">
+				<div>
+					<div className="setting_list_toggle">
 						<a href="#!" onClick={() => handleChange("alarm")}>
-							알림설정<i className="open_btn">열기</i>
+							<h2>알림설정</h2><i className="open_btn">열기</i>
 						</a>
-						<ul className="setting_list_item">
-							<li>알림차단</li>
-							<li>소리</li>
-							<li>진동</li>
-							<li>
-								<span>알림음 설정</span>
-								<span>기본 알림 소리 (조약돌)</span>
-							</li>
-						</ul>
-					</li>
-					<li className="setting_list">
+						<form className="setting_list_wrap">
+							<fieldset>
+								<legend className="hide">알림설정</legend>
+								<div>
+									<div className="setting_list_item">
+										<label htmlFor="alarm_stop">알림차단</label>
+										<label className="switch">	
+											<input type="checkbox" id="alarm_stop" name="alarm_stop" value="y"/>
+											<span className="ck_slider round"></span>
+										</label>
+										
+									</div>
+									<div className="setting_list_item">
+										<label htmlFor="alarm_sound">소리</label>
+										<label className="switch">
+											<input type="checkbox" id="alarm_sound" name="alarm_sound" value="y"/>
+											<span className="ck_slider round"></span>
+										</label>
+										
+									</div>
+									<div className="setting_list_item">
+										<label htmlFor="alarm_vibrate">진동</label>
+										<label className="switch">
+												<input type="checkbox" id="alarm_vibrate" name="alarm_vibrate" value="y"/>
+												<span className="ck_slider round"></span>
+										</label>
+									</div>
+									<div className="setting_list_item">
+										<span>알림음 설정</span>
+										<a href="#!" className="setting_list_cont">기본 알림 소리 (조약돌)</a>
+									</div>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+					<div className="setting_list_toggle">
 						<a href="#!" onClick={() => handleChange("terms")}>
-							서비스 이용 약관<i className="open_btn">열기</i>
+							<h2>서비스 이용 약관</h2><i className="open_btn">열기</i>
 						</a>
-						<ul className="setting_list_item">
-							<li>알림차단</li>
-							<li>소리</li>
-							<li>진동</li>
-							<li>
-								<span>알림음 설정</span>
-								<span>기본 알림 소리 (조약돌)</span>
-							</li>
-						</ul>
-					</li>
-					<li className="setting_list">
+						<div className="setting_list_wrap">
+							<h3>제 1 장 총칙</h3>
+							<ul>
+								<li>제 1조 (목적)
+									<ul>
+										<li>본 약관은 서비스(이하 "회사"라 한다)는 홈페이지에서 제공하는 서비스(이하 "서비스"라 한다)를 제공함에 있어 회사와 이용자의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.</li>
+									</ul>
+								</li>
+								<li>제 2조 (용어의 정의)
+									<ul>
+										<li>1. 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+											<ul>
+												<li>'서비스'란 회사가 이용자에게 서비스를 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 구성한 가상의 공간을 의미하며, 서비스 자체를 의미하기도 합니다.</li>
+												<li>'회원(이하 "회원"이라 한다)'이란 개인정보를 제공하여 회원등록을 한 자로서 홈페이지의 정보를 지속적으로 제공받으며 홈페이지가 제공하는 서비스를 계속적으로 이용할 수 있는 자를 말합니다.</li>
+												<li>'아이디(이하 "ID"라 한다)'란 회원의 식별과 회원의 서비스 이용을 위하여 회원이 선정하고 회사가 승인하는 회원 고유의 계정 정보를 의미합니다.</li>
+												<li>'비밀번호'란 회원이 부여 받은 ID와 일치된 회원임을 확인하고, 회원의 개인정보를 보호하기 위하여 회원이 정한 문자와 숫자의 조합을 의미합니다.</li>
+												<li>'회원탈퇴(이하 "탈퇴"라 한다)'란 회원이 이용계약을 해지하는 것을 의미합니다.</li>
+											</ul>
+										</li>
+										<li>2. 본 약관에서 사용하는 용어의 정의는 제1항에서 정하는 것을 제외하고는 관계법령 및 서비스 별 안내에서 정하는 바에 의합니다.</li>
+									</ul>
+								</li>
+								<li>제 3조 (이용약관의 효력 및 변경)
+									<ul>
+										<li>1. 회사는 본 약관의 내용을 회원이 쉽게 알 수 있도록 각 서비스 사이트의 초기 서비스화면에 게시합니다.</li>
+									</ul>
+								</li>
+
+
+
+
+2. 회사는 약관의 규제에 관한 법률, 전자거래기본법, 전자 서명법, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 등 관련법을 위배하지 않는 범위에서 본 약관을 개정할 수 있습니다.
+
+3. 회사는 본 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행 약관과 함께 회사가 제공하는 서비스 사이트의 초기 화면에 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다.
+
+다만, 회원에게 불리하게 약관내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 공지합니다. 이 경우 회사는 개정 전 내용과 개정 후 내용을 명확하게 비교하여 회원이 알기 쉽도록 표시합니다.
+
+4. 회원은 개정된 약관에 대해 거부할 권리가 있습니다. 회원은 개정된 약관에 동의하지 않을 경우 서비스 이용을 중단하고 회원등록을 해지할 수 있습니다.
+
+단, 개정된 약관의 효력 발생일 이후에도 서비스를 계속 이용할 경우에는 약관의 변경사항에 동의한 것으로 간주합니다.
+
+5. 변경된 약관에 대한 정보를 알지 못해 발생하는 회원 피해는 회사가 책임지지 않습니다.
+
+
+
+<li>제 4조 (약관 외 준칙)</li>
+
+
+
+1. 본 약관은 회사가 제공하는 서비스에 관해 별도의 정책 및 운영규칙과 함께 적용됩니다.
+
+2. 본 약관에 명시되지 아니한 사항과 본 약관의 해석에 관하여는 관계법령에 따릅니다.
+
+</ul>
+
+
+							</p>
+						</div>
+					</div>
+					<div className="setting_list_toggle">
 						<a href="#!" onClick={() => handleChange("privacy")}>
-							개인정보처리방침<i className="open_btn">열기</i>
+							<h2>개인정보처리방침</h2><i className="open_btn">열기</i>
 						</a>
-						<ul className="setting_list_item">
-							<li>알림차단</li>
-							<li>소리</li>
-							<li>진동</li>
-							<li>
-								<span>알림음 설정</span>
-								<span>기본 알림 소리 (조약돌)</span>
-							</li>
-						</ul>
-					</li>
-				</ul>
+						<div className="setting_list_wrap"><p>개인정보처리방침~~</p></div>
+					</div>
+				</div>
 			</main>
 			<BottomNav activeMenu="setting" />
 		</div>

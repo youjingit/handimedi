@@ -4,7 +4,7 @@ import { IoCaretDown, IoClose } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import TemplateNavbar from "./Navbar";
 
-const MINUTES = ["00", "10", "20", "30", "40", "50"];
+const MINUTES = ["0", "10", "20", "30", "40", "50"];
 
 function AlarmStep2({
 	values,
@@ -14,9 +14,9 @@ function AlarmStep2({
 	onNextClick,
 }) {
 	const [modal, setModal] = useState(false); // 모달창 스위치
-	const [hour, setHour] = useState("00"); // 시간 입력
-	const [minute, setMinute] = useState("00"); // 분 입력
-	const [modalMinute, setModalMinute] = useState("00"); // 모달창에서 분 선택
+	const [hour, setHour] = useState("0"); // 시간 입력
+	const [minute, setMinute] = useState("0"); // 분 입력
+	const [modalMinute, setModalMinute] = useState("0"); // 모달창에서 분 선택
 
 	const handleChangeHour = (event) => {
 		// 시간 입력 input

@@ -1,25 +1,54 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+	"name": "Handimedi",
+	"short_name": "Handimedi",
+	"description": "start for PWA",
+	"scope": ".",
+	"start_url": "./",
+	"display": "fullscreen",
+	"orientation": "portrait",
+	"theme_color": "#ffffff",
+	"background_color": "#ffeaf0",
+	"icons": [
+		{
+			"src": "static/images/icons/favicon.ico",
+			"sizes": "32x32 16x16",
+			"type": "image/x-icon"
+		},
+		{
+			"src": "static/images/icons/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "static/images/icons/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"shortcuts": [
+		{
+			"name": "첫 번째 메뉴",
+			"short_name": "MENU 1",
+			"description": "첫 번째 메뉴입니다.",
+			"url": "./",
+			"icons": [
+				{
+					"src": "static/images/icons/android-chrome-192x192.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "두 번째 메뉴",
+			"short_name": "MENU 2",
+			"description": "두 번째 메뉴입니다.",
+			"url": "./",
+			"icons": [
+				{
+					"src": "static/images/icons/android-chrome-192x192.png",
+					"sizes": "192x192"
+				}
+			]
+		}
+	]
 }

@@ -11,7 +11,7 @@ function TopNav() {
       <h1 className="navbar_brand" onClick={handleHomeClick}>
         <img
           src={process.env.PUBLIC_URL + "/static/images/logo.png"}
-          alt="handimedi"
+          alt="Handimedi"
         />
       </h1>
     </nav>

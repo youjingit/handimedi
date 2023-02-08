@@ -20,7 +20,7 @@ function Splash() {
       <h1>
         <img
           src={process.env.PUBLIC_URL + "/static/images/logo.png"}
-          alt="handimedi"
+          alt="Handimedi"
         />
       </h1>
     </div>

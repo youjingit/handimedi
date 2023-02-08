@@ -24,10 +24,12 @@ function AlarmForm() {
     let newValue = event.target.value; // 사용자가 변경할 값
     if (event.target.name === "days") {  
       if (event.target.checked) {      // 요일 선택했을 때
-        newValue = [...values.days, event.target.value]; // 새로운 배열에 기존 요일 배열사본 + 선택한 값 넣기 
+        newValue = [...values.days, event.target.value]; // 새로운 배열 =  기존 요일 배열 사본 + 선택한 값 
       } else {  // 요일 선택 해제했을 때 
         newValue = values.days.filter((day) => day !== event.target.value);
-      }
+        // 사용자가 해제한 값과 일치하지 않는 값을 데이터에 넣음 
+        // (일치하면 데이터 안에 안 넣음 (=삭제)) 
+      } 
 
       // newValue = [];
       // for(var i = 0; i < values.days.length; i++){

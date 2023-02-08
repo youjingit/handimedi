@@ -55,7 +55,7 @@ function Intro() {
             <div className="margin_bt">
               <img
                 src={process.env.PUBLIC_URL + "/static/images/hand.jpg"}
-                alt="handimedi"
+                alt="Handimedi"
               />
             </div>
             <Link to="/home" className="intro_swiper_item_btn">

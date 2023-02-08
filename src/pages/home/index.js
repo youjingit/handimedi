@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { FaSearch, FaLightbulb } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faQ, faA } from "@fortawesome/free-solid-svg-icons";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import BottomNav from "../../components/fragments/BottomNav";
 import TopNav from "../../components/fragments/TopNav";
@@ -76,7 +78,7 @@ function Home() {
                 오늘의 간단 상식 <FaLightbulb className="FaLightbulb" />
               </h3>
               <div className="question_header">
-                <div>Q.</div>
+                <div><FontAwesomeIcon icon= {faQ}/>. </div>
                 <p>캡슐을 뜯어 내용물만 복용해도 될까요?</p>
               </div>
               <div
@@ -90,7 +92,7 @@ function Home() {
             </div>
             {questionOpen && (
               <div className="question_body">
-                <div>A.</div>
+                <div className="icon_wrap"><FontAwesomeIcon icon= {faA}/>. </div>
                 <p>
                   젤라틴으로 만든 캡슐은 치료하고자 하는 부위와 이동 시간을
                   설정하기 위해 만들어진 것이므로 형태 그대로 복용해야 합니다!

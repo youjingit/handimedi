@@ -264,7 +264,7 @@ function Setting() {
 							<div>
 								<h3>1. 개인정보의 처리 목적</h3>
 								<p>
-									&lt;(주)handimedi&gt;(‘www.handimedi.com’이하 ‘핸디메디’) 은
+									&lt;(주)Handimedi&gt;(‘www.Handimedi.com’이하 ‘핸디메디’) 은
 									다음의 목적을 위하여 개인정보를 처리하고 있으며, 다음의 목적
 									이외의 용도로는 이용하지 않습니다.
 								</p>

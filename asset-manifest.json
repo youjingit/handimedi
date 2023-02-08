@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/youjingit/handimedi/static/css/main.49740df3.css",
-    "main.js": "/youjingit/handimedi/static/js/main.2f6f5f0e.js",
+    "main.js": "/youjingit/handimedi/static/js/main.71826aa3.js",
     "static/media/NotoSansKR-Bold.otf": "/youjingit/handimedi/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/NotoSansKR-Regular.otf": "/youjingit/handimedi/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
     "static/media/NotoSansKR-Light.otf": "/youjingit/handimedi/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
     "index.html": "/youjingit/handimedi/index.html",
     "main.49740df3.css.map": "/youjingit/handimedi/static/css/main.49740df3.css.map",
-    "main.2f6f5f0e.js.map": "/youjingit/handimedi/static/js/main.2f6f5f0e.js.map"
+    "main.71826aa3.js.map": "/youjingit/handimedi/static/js/main.71826aa3.js.map"
   },
   "entrypoints": [
     "static/css/main.49740df3.css",
-    "static/js/main.2f6f5f0e.js"
+    "static/js/main.71826aa3.js"
   ]
 }

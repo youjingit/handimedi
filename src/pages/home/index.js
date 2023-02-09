@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaSearch, FaLightbulb } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faQ, faA } from "@fortawesome/free-solid-svg-icons";
@@ -55,19 +56,19 @@ function Home() {
           </div>
           <div className="service_btn_container">
             <div className="sevice_btn_wrap">
-              <button type="button" className="service_btn purple">
+              <Link to="/alarm" className="service_btn purple">
                 약 복용 알림
                 <br />
                 등록하기
-              </button>
+              </Link>
             </div>
           </div>
           <div className="service_btn_container reverse">
             <div className="sevice_btn_wrap">
-              <button type="button" className="service_btn blue">
+              <Link to="/photo" className="service_btn blue">
                 사진으로
                 <br />약 검색하기
-              </button>
+              </Link>
             </div>
           </div>
         </section>

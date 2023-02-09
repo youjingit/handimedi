@@ -1,3 +1,13 @@
+그린컴퓨터학원에서 만든 react project (SPA, PWA) 입니다
+
+파일을 다운로드 받은 후 에디터(vscode)의 터미널에서
+
+npm install 먼저 입력 후 
+
+npm run start 를 입력하면 앱이 실행됩니다.
+
+데이터는 브라우저의 localstorage에 저장됩니다.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -30,18 +30,17 @@ function AlarmForm() {
         // 사용자가 해제한 값과 일치하지 않는 값을 데이터에 넣음 
         // (일치하면 데이터 안에 안 넣음 (=삭제)) 
       } 
-
       // newValue = [];
-      // for(var i = 0; i < values.days.length; i++){
-      // 	var day = values.days[i];
-      // 	if(day !== event.target.value){
-      // 		newValue.push(day);
-      // 	}
-      // }
+      // for( var i = 0; i < values.days.length; i++ ){
+      //   var day = values.days[i];
+      //     if(day !== event.target.value){
+      //       newValue.push(day);
+      //     }
+      // } 
     }
     setValues((state) => ({
       ...state,
-      [event.target.name]: newValue,
+      [event.target.name]: newValue, // 사용자가 입력한 약 이름 넣기
     }));
   };
 

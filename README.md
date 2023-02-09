@@ -1,4 +1,4 @@
-그린컴퓨터학원에서 만든 react project (SPA, PWA) 입니다
+react project (SPA, PWA) 입니다
 
 파일을 다운로드 받은 후 에디터(vscode)의 터미널에서
 

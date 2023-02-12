@@ -34,7 +34,7 @@
 			"icons": [
 				{
 					"src": "static/images/icons/favicon.ico",
-					"sizes": "192x192"
+					"sizes": "32x32"
 				}
 			]
 		},
@@ -46,7 +46,7 @@
 			"icons": [
 				{
 					"src": "static/images/icons/favicon.ico",
-					"sizes": "192x192"
+					"sizes": "32x32"
 				}
 			]
 		}

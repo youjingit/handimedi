@@ -33,12 +33,8 @@
 			"url": "./",
 			"icons": [
 				{
-					"src": "static/images/icons/favicon.ico",
-					"sizes": "32x32"
-				},
-				{
-					"src": "static/images/icons/favicon.ico",
-					"sizes": "96x96"
+					"src": "static/images/icons/favicon-16x16",
+					"sizes": "16x16"
 				}
 			]
 		},
@@ -49,12 +45,8 @@
 			"url": "./",
 			"icons": [
 				{
-					"src": "static/images/icons/favicon.ico",
-					"sizes": "32x32"
-				},
-				{
-					"src": "static/images/icons/favicon.ico",
-					"sizes": "96x96"
+					"src": "static/images/icons/favicon-16x16",
+					"sizes": "16x16"
 				}
 			]
 		}

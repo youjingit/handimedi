@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/handimedi/static/css/main.4ef1a3c4.css",
-    "main.js": "/handimedi/static/js/main.2397213a.js",
+    "main.js": "/handimedi/static/js/main.9ee75897.js",
     "static/media/NotoSansKR-Bold.otf": "/handimedi/static/media/NotoSansKR-Bold.c252383c4f70753be0e7.otf",
     "static/media/NotoSansKR-Regular.otf": "/handimedi/static/media/NotoSansKR-Regular.e1aa54c04a18648e6468.otf",
     "static/media/NotoSansKR-Light.otf": "/handimedi/static/media/NotoSansKR-Light.636ff9b51e826a733c3d.otf",
     "service-worker.js": "/handimedi/service-worker.js",
     "index.html": "/handimedi/index.html",
     "main.4ef1a3c4.css.map": "/handimedi/static/css/main.4ef1a3c4.css.map",
-    "main.2397213a.js.map": "/handimedi/static/js/main.2397213a.js.map"
+    "main.9ee75897.js.map": "/handimedi/static/js/main.9ee75897.js.map"
   },
   "entrypoints": [
     "static/css/main.4ef1a3c4.css",
-    "static/js/main.2397213a.js"
+    "static/js/main.9ee75897.js"
   ]
 }

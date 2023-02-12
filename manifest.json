@@ -35,6 +35,10 @@
 				{
 					"src": "static/images/icons/favicon.ico",
 					"sizes": "32x32"
+				},
+				{
+					"src": "static/images/icons/favicon.ico",
+					"sizes": "96x96"
 				}
 			]
 		},
@@ -47,6 +51,10 @@
 				{
 					"src": "static/images/icons/favicon.ico",
 					"sizes": "32x32"
+				},
+				{
+					"src": "static/images/icons/favicon.ico",
+					"sizes": "96x96"
 				}
 			]
 		}
